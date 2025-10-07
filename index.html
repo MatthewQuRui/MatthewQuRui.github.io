@@ -211,6 +211,24 @@
             margin-bottom: 30px;
             padding-left: 20px;
             border-left: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        .timeline-item-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 5px;
+        }
+
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .timeline-item h3 {
@@ -451,12 +469,18 @@
         <section id="education">
             <h2>Education</h2>
             <div class="timeline-item">
-                <h3>Boston University</h3>
+                <div class="timeline-item-header">
+                    <img src="BU.png" alt="Boston University Logo" class="company-logo">
+                    <h3>Boston University</h3>
+                </div>
                 <div class="subtitle">Master's Degree in Data Science</div>
                 <div class="date">2025 - present</div>
             </div>
             <div class="timeline-item">
-                <h3>Nanjing University of Posts and Telecommunications</h3>
+                <div class="timeline-item-header">
+                    <img src="njupt.jpeg" alt="NJUPT Logo" class="company-logo">
+                    <h3>Nanjing University of Posts and Telecommunications</h3>
+                </div>
                 <div class="subtitle">Bachelor's Degree in Data Science and Big Data Technology</div>
                 <div class="date">2020 - 2024</div>
             </div>
@@ -466,7 +490,10 @@
         <section id="experience">
             <h2>Experience</h2>
             <div class="timeline-item">
-                <h3>Student Research Assistant</h3>
+                <div class="timeline-item-header">
+                    <img src="csail.png" alt="MIT CSAIL Logo" class="company-logo">
+                    <h3>Student Research Assistant</h3>
+                </div>
                 <div class="subtitle">MIT CSAIL - Bioinformatics Copilot</div>
                 <div class="date">Feb 2025 - present</div>
                 <ul>
@@ -476,7 +503,10 @@
                 </ul>
             </div>
             <div class="timeline-item">
-                <h3>Data Analysis Intern</h3>
+                <div class="timeline-item-header">
+                    <img src="shein.png" alt="SHEIN Logo" class="company-logo">
+                    <h3>Data Analysis Intern</h3>
+                </div>
                 <div class="subtitle">SHEIN International Import & Export Co. (Guangzhou)</div>
                 <div class="date">Jul 2023 - Sep 2023</div>
                 <ul>

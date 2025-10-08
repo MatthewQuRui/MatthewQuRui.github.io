@@ -344,27 +344,34 @@
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
         }
 
         .skill-item {
             background-color: var(--card-bg);
-            padding: 20px;
+            padding: 15px 20px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
         }
 
         .skill-item h3 {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            color: var(--accent-color);
+            font-size: 1em;
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-weight: 600;
         }
 
         .skill-item p {
             color: var(--secondary-text);
-            font-size: 0.9em;
-            line-height: 1.6;
+            font-size: 0.85em;
         }
 
         /* Research Interests */
@@ -472,11 +479,9 @@
             <div class="interests-list">
                 <span class="interest-tag">Large Language Models</span>
                 <span class="interest-tag">LLM Agents</span>
-                <span class="interest-tag">Bioinformatics</span>
                 <span class="interest-tag">Deep Learning</span>
                 <span class="interest-tag">Reinforcement Learning</span>
                 <span class="interest-tag">Data Science</span>
-                <span class="interest-tag">Backend Development</span>
             </div>
         </section>
 
@@ -509,12 +514,13 @@
                     <img src="csail.png" alt="MIT CSAIL Logo" class="company-logo">
                     <h3>Student Research Assistant</h3>
                 </div>
-                <div class="subtitle">MIT CSAIL - Bioinformatics Copilot</div>
-                <div class="date">Feb 2025 - present</div>
+                <div class="subtitle">MIT CSAIL - Professor Manolis Kellis's Lab</div>
+                <div class="date">Apr 2025 - present</div>
                 <ul>
-                    <li>Integrated OpenAI, DeepSeek, and Anthropic models via a unified abstraction, enabling reliable parsing of natural-language instructions into structured task parameters</li>
-                    <li>Orchestrated single-cell and multi-omics workflows with automated script generation and closed-loop SLURM job management (sbatch/squeue submission, monitoring, evaluation)</li>
-                    <li>Developed a PyQt5 desktop GUI with real-time progress visualization and one-click job control, lowering analysis barriers and cutting operational overhead</li>
+                    <li>Developing AI-powered bioinformatics tools combining LLM agents with automated workflow orchestration for single-cell genomics analysis</li>
+                    <li>Building multi-agent systems for natural language understanding and intelligent scientific assistance in computational biology</li>
+                    <li>Designing scalable pipeline architectures integrating multiple LLM providers (OpenAI, DeepSeek, Anthropic) for research automation</li>
+                    <li>Collaborating with biologists to create conversational AI interfaces that democratize access to complex computational workflows</li>
                 </ul>
             </div>
             <div class="timeline-item">
@@ -537,37 +543,53 @@
             <h2>Selected Projects</h2>
 
             <div class="project-card">
-                <h3>Bioinformatics Copilot</h3>
+                <h3>BioCopilot: AI-Powered Bioinformatics Analysis Platform</h3>
                 <div class="project-meta">
                     <span class="role">Student Research Assistant, MIT CSAIL</span>
-                    <span class="date">Feb 2025 - present</span>
+                    <span class="date">Apr 2025 - present</span>
                 </div>
+                <p>
+                    Developed an intelligent bioinformatics copilot that combines conversational AI with automated pipeline orchestration,
+                    enabling researchers to execute complex single-cell genomics workflows through natural language interaction.
+                </p>
                 <ul>
-                    <li>Integrated multiple LLM providers (OpenAI, DeepSeek, Anthropic) for natural-language bioinformatics workflow automation</li>
-                    <li>Built automated SLURM job orchestration for single-cell and multi-omics analysis pipelines</li>
-                    <li>Created PyQt5 GUI with real-time monitoring and one-click job control</li>
+                    <li><strong>Multi-Agent Intent Recognition System:</strong> Architected a multi-layer intent detection framework combining AI-powered classification with fuzzy matching fallback, achieving robust natural language understanding across 15+ bioinformatics task categories. Reduced manual pipeline configuration time by 80%</li>
+                    <li><strong>LLM Scientist Agent:</strong> Built a specialized AI analysis client that acts as a domain expert for single-cell RNA-seq analysis, providing contextual interpretation and parameter recommendations. Empowered researchers without deep bioinformatics expertise to make informed decisions on QC thresholds and clustering parameters</li>
+                    <li><strong>Pipeline Orchestration Framework:</strong> Designed a three-layer pipeline architecture (Planner → Executor → Integrator) with SLURM job submission and monitoring system. Enabled processing of 100+ samples in parallel with automated quality assessment and failure recovery</li>
+                    <li><strong>Multi-Model LLM Integration:</strong> Integrated three LLM providers (OpenAI GPT-4, DeepSeek, Anthropic Claude) with unified API abstraction, enabling model switching at runtime and providing flexibility based on cost, latency, and performance requirements</li>
                 </ul>
+                <p style="margin-top: 10px; color: var(--secondary-text); font-size: 0.9em;">
+                    <strong>Impact:</strong> 10x productivity increase in pipeline setup time; processed 500+ samples with 95%+ success rate in automated quality assessment
+                </p>
             </div>
 
             <div class="project-card">
-                <h3>Path Planning for Intelligent Question Answering Based on LLMs</h3>
+                <h3>Intelligent Tourism Q&A and Route Planning System with LLM Agents</h3>
                 <div class="project-meta">
                     <span class="role">Project Lead</span>
-                    <span class="date">Jan 2024 - Jun 2024</span>
+                    <span class="date">Sept 2023 - June 2024</span>
                 </div>
+                <p>
+                    Developed an LLM-powered intelligent tourism guide system combining knowledge-base Q&A and agent tool orchestration,
+                    providing personalized, real-time travel solutions through natural language interaction.
+                </p>
                 <ul>
-                    <li>Fine-tuned QWEN-7B model with specialized dataset for tourist attraction Q&A, significantly improving domain accuracy</li>
-                    <li>Integrated QWEN series with LangChain framework for knowledge-based Q&A system</li>
-                    <li>Implemented real-time route planning using Gaode API with improved usability and response efficiency</li>
-                    <li>Developed comprehensive evaluation methodology for knowledge-based Q&A and agent performance</li>
+                    <li><strong>Domain Expert LLM Fine-tuning:</strong> Fine-tuned QWEN-7B using LoRA on custom tourism dataset (crawled from Baidu Baike and Dianping, augmented with GPT-4). Achieved +49% improvement in semantic similarity (0.531→0.791) and +53% in knowledge matching rate (53%→81%) using novel CTKB-EVAL metrics</li>
+                    <li><strong>Multi-Tool ReAct Agent System:</strong> Built LangChain-based ReAct agent integrating 4 tools (knowledge-base search, route planning via Gaode Maps API, weather check, internet search). Developed custom output parser for ChatGLM3 with streaming callback handler for real-time progress feedback</li>
+                    <li><strong>RAG Knowledge-Base Architecture:</strong> Implemented end-to-end RAG pipeline (document loading → text chunking → vectorization with piccolo-large-zh → Top-K retrieval → LLM generation) with optimized retrieval strategies (Top-K=5, similarity threshold=0.5)</li>
+                    <li><strong>Task-Level Model Selection Strategy:</strong> Conducted comparative analysis across QWEN-7B, QWEN-7B-LoRA, and QWEN-14B, discovering QWEN-14B achieved 89.28% F1 score and 94.94% location parsing accuracy on agent tasks, while fine-tuned 7B excelled at knowledge Q&A</li>
                 </ul>
+                <p style="margin-top: 10px; color: var(--secondary-text); font-size: 0.9em;">
+                    <strong>Impact:</strong> Successfully deployed as intelligent tour guide for Tongli Ancient Town; recognized as Outstanding Undergraduate Thesis
+                </p>
+                <a href="https://www.youtube.com/watch?v=WV_aUTVudGc" class="project-link" target="_blank">Demo →</a>
             </div>
 
             <div class="project-card">
                 <h3>Deep Reinforcement Learning Research Based on TD3 Algorithm</h3>
                 <div class="project-meta">
                     <span class="role">Project Leader</span>
-                    <span class="date">Jan 2024 - Jun 2024</span>
+                    <span class="date">Jan 2023 - Jun 2023</span>
                 </div>
                 <p>
                     Proposed <strong>LPT3</strong>, a reinforcement learning algorithm combining LSTM, PER, and TD3,
@@ -583,20 +605,44 @@
             <h2>Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <h3>Programming</h3>
-                    <p>Proficient in Python for data analytics, machine learning, and deep learning applications.</p>
+                    <h3>Python</h3>
+                    <p>Experienced</p>
                 </div>
                 <div class="skill-item">
-                    <h3>Data Analysis</h3>
-                    <p>Python for data cleaning, visualization, and modeling; SQL for data extraction and processing.</p>
+                    <h3>PyTorch</h3>
+                    <p>Experienced</p>
+                </div>
+                <div class="skill-item">
+                    <h3>LangChain</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-item">
+                    <h3>SQL</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Git</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Machine Learning</h3>
+                    <p>Experienced</p>
                 </div>
                 <div class="skill-item">
                     <h3>Deep Learning</h3>
-                    <p>Experienced with PyTorch; BiLSTM-CRF for entity extraction and NER tasks.</p>
+                    <p>Experienced</p>
                 </div>
                 <div class="skill-item">
-                    <h3>Large Language Models</h3>
-                    <p>Fine-tuning LLMs and building agents with external tool integration for workflow automation.</p>
+                    <h3>LLM Fine-tuning</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Data Analysis</h3>
+                    <p>Experienced</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Reinforcement Learning</h3>
+                    <p>Intermediate</p>
                 </div>
             </div>
         </section>

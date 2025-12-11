@@ -438,7 +438,8 @@
                 <a href="#home">Home</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="QuruiZhang_CV.pdf" target="_blank">CV</a>
+                <a href="QuruiZhang_CV.pdf" target="_blank">CV(English)</a>
+                <a href="Qurui%20Zhang_CV_ZH.pdf" target="_blank">CV(Chinese)</a>
             </div>
             <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
                 <span id="theme-icon">🌙</span>
@@ -508,33 +509,46 @@
         <!-- Experience -->
         <section id="experience">
             <h2>Experience</h2>
-            <div class="timeline-item">
-                <div class="timeline-item-header">
-                    <img src="csail.png" alt="MIT CSAIL Logo" class="company-logo">
-                    <h3>Student Research Assistant</h3>
+                <div class="timeline-item">
+                    <div class="timeline-item-header">
+                        <img src="csail.png" alt="MIT CSAIL Logo" class="company-logo">
+                        <h3>Student Research Assistant</h3>
+                    </div>
+                    <div class="subtitle">MIT CSAIL - Professor Manolis Kellis's Lab</div>
+                    <div class="date">Apr 2025 - present</div>
+                    <ul>
+                        <li>Architected agentic LLM pipelines that automate single-cell workflows from demultiplexing to UMAP analysis</li>
+                        <li>Designed multi-agent reasoning systems that integrate LLM tools for robust inference in computational biology</li>
+                        <li>Engineered provider-agnostic orchestration layers and conversational bioinformatics platforms for domain scientists</li>
+                        <li>Developing a tree-structured agent framework where node-level LLMs decide to split or solve tasks under a global pipeline</li>
+                    </ul>
                 </div>
-                <div class="subtitle">MIT CSAIL - Professor Manolis Kellis's Lab</div>
-                <div class="date">Apr 2025 - present</div>
-                <ul>
-                    <li>Developing AI-powered bioinformatics tools combining LLM agents with automated workflow orchestration for single-cell genomics analysis</li>
-                    <li>Building multi-agent systems for natural language understanding and intelligent scientific assistance in computational biology</li>
-                    <li>Designing scalable pipeline architectures integrating multiple LLM providers (OpenAI, DeepSeek, Anthropic) for research automation</li>
-                    <li>Collaborating with biologists to create conversational AI interfaces that democratize access to complex computational workflows</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-item-header">
-                    <img src="shein.png" alt="SHEIN Logo" class="company-logo">
+                <div class="timeline-item">
+                    <div class="timeline-item-header">
+                        <img src="shein.png" alt="SHEIN Logo" class="company-logo">
                     <h3>Data Analysis Intern</h3>
                 </div>
-                <div class="subtitle">SHEIN International Import & Export Co. (Guangzhou)</div>
-                <div class="date">Jul 2023 - Sep 2023</div>
-                <ul>
-                    <li>Built Tableau dashboards with interactive maps/filters, boosting analysis efficiency by 30% and supporting market strategy</li>
-                    <li>Analyzed sales & traffic data to detect anomalies and deliver recommendations that raised new-product conversion rates</li>
-                    <li>Applied BiLSTM on 1.8M reviews to extract commute insights, informing product design/marketing and earning team recognition</li>
-                </ul>
-            </div>
+                    <div class="subtitle">SHEIN International Import & Export Co. (Guangzhou)</div>
+                    <div class="date">Jul 2023 - Sep 2023</div>
+                    <ul>
+                        <li>Built Tableau dashboards with interactive maps/filters, improving analysis efficiency by 30% for market strategy reviews</li>
+                        <li>Analyzed sales and traffic data to flag anomalies and recommend actions that lifted new-product conversion</li>
+                        <li>Trained BiLSTM models on 1.8M reviews to extract commute insights for product design and marketing teams</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-header">
+                        <img src="njupt.jpeg" alt="NJUPT HPC Lab Logo" class="company-logo">
+                        <h3>Undergraduate NLP Research Assistant</h3>
+                    </div>
+                    <div class="subtitle">NJUPT HPC & Big Data Processing Institute</div>
+                    <div class="date">Jul 2021 - Jun 2023</div>
+                    <ul>
+                        <li>Developed a BiLSTM-CRF entity extractor with generative summarization that captured opinions in 77.69% of 20k product reviews</li>
+                        <li>Proposed Y-Rank, a lightweight unsupervised keyphrase extraction algorithm using sentence information content and graph similarity</li>
+                        <li>Evaluated Y-Rank on five benchmarks (KP20K, SemEval-2010, wikinews-fr-100, ttermith-eval, taln-archives), gaining +1.3% precision/+1.4% F1</li>
+                    </ul>
+                </div>
         </section>
 
         <!-- Projects -->
@@ -542,60 +556,51 @@
             <h2>Selected Projects</h2>
 
             <div class="project-card">
-                <h3>BioCopilot: AI-Powered Bioinformatics Analysis Platform</h3>
+                <h3>Colombian Extradition Data Agent</h3>
                 <div class="project-meta">
-                    <span class="role">Student Research Assistant, MIT CSAIL</span>
-                    <span class="date">Apr 2025 - present</span>
+                    <span class="role">LLMs · LangChain · DeepAgent</span>
+                    <span class="date">Sep 2025 - present</span>
                 </div>
                 <p>
-                    Developed an intelligent bioinformatics copilot that combines conversational AI with automated pipeline orchestration,
-                    enabling researchers to execute complex single-cell genomics workflows through natural language interaction.
+                    Built an end-to-end agent pipeline that consolidates more than 3,300 extradition records and exposes a React interface for analysts.
                 </p>
                 <ul>
-                    <li><strong>Multi-Agent Intent Recognition System:</strong> Architected a multi-layer intent detection framework combining AI-powered classification with fuzzy matching fallback, achieving robust natural language understanding across 15+ bioinformatics task categories. Reduced manual pipeline configuration time by 80%</li>
-                    <li><strong>LLM Scientist Agent:</strong> Built a specialized AI analysis client that acts as a domain expert for single-cell RNA-seq analysis, providing contextual interpretation and parameter recommendations. Empowered researchers without deep bioinformatics expertise to make informed decisions on QC thresholds and clustering parameters</li>
-                    <li><strong>Pipeline Orchestration Framework:</strong> Designed a three-layer pipeline architecture (Planner → Executor → Integrator) with SLURM job submission and monitoring system. Enabled processing of 100+ samples in parallel with automated quality assessment and failure recovery</li>
-                    <li><strong>Multi-Model LLM Integration:</strong> Integrated three LLM providers (OpenAI GPT-4, DeepSeek, Anthropic Claude) with unified API abstraction, enabling model switching at runtime and providing flexibility based on cost, latency, and performance requirements</li>
+                    <li>Orchestrated a LangChain workflow with DeepAgent structure to merge multi-source extradition data and maintain lineage</li>
+                    <li>Benchmarked Autogen, CrewAI, and LangChain orchestration to compare agent tool-call reliability and tune DeepAgent message flows</li>
+                    <li>Led weekly client reviews and documented the lifecycle from EDA and PoC experiments to delivery with a full audit trail</li>
                 </ul>
-                <p style="margin-top: 10px; color: var(--secondary-text); font-size: 0.9em;">
-                    <strong>Impact:</strong> 10x productivity increase in pipeline setup time; processed 500+ samples with 95%+ success rate in automated quality assessment
-                </p>
             </div>
 
             <div class="project-card">
-                <h3>Intelligent Tourism Q&A and Route Planning System with LLM Agents</h3>
+                <h3>Culture & Tourism AI Copilot</h3>
                 <div class="project-meta">
                     <span class="role">Project Lead</span>
-                    <span class="date">Sept 2023 - June 2024</span>
+                    <span class="date">Jan 2024 - Jun 2024</span>
                 </div>
                 <p>
-                    Developed an LLM-powered intelligent tourism guide system combining knowledge-base Q&A and agent tool orchestration,
-                    providing personalized, real-time travel solutions through natural language interaction.
+                    Designed a LangChain ReAct agent that combines RAG, four tourism tools, and a custom ChatGLM3 parser for bilingual tour planning.
                 </p>
                 <ul>
-                    <li><strong>Domain Expert LLM Fine-tuning:</strong> Fine-tuned QWEN-7B using LoRA on custom tourism dataset (crawled from Baidu Baike and Dianping, augmented with GPT-4). Achieved +49% improvement in semantic similarity (0.531→0.791) and +53% in knowledge matching rate (53%→81%) using novel CTKB-EVAL metrics</li>
-                    <li><strong>Multi-Tool ReAct Agent System:</strong> Built LangChain-based ReAct agent integrating 4 tools (knowledge-base search, route planning via Gaode Maps API, weather check, internet search). Developed custom output parser for ChatGLM3 with streaming callback handler for real-time progress feedback</li>
-                    <li><strong>RAG Knowledge-Base Architecture:</strong> Implemented end-to-end RAG pipeline (document loading → text chunking → vectorization with piccolo-large-zh → Top-K retrieval → LLM generation) with optimized retrieval strategies (Top-K=5, similarity threshold=0.5)</li>
-                    <li><strong>Task-Level Model Selection Strategy:</strong> Conducted comparative analysis across QWEN-7B, QWEN-7B-LoRA, and QWEN-14B, discovering QWEN-14B achieved 89.28% F1 score and 94.94% location parsing accuracy on agent tasks, while fine-tuned 7B excelled at knowledge Q&A</li>
+                    <li>Fine-tuned QWEN-7B with LoRA on curated tourism corpora, boosting CTKB-EVAL semantic and knowledge scores by 50%</li>
+                    <li>Integrated knowledge-base search, Gaode route planning, weather checks, and internet search into a LangChain ReAct workflow</li>
+                    <li>Benchmarked model stack performance, with QWEN-14B achieving 89.3% F1 and 94.9% location accuracy in agent evaluations</li>
                 </ul>
-                <p style="margin-top: 10px; color: var(--secondary-text); font-size: 0.9em;">
-                    <strong>Impact:</strong> Successfully deployed as intelligent tour guide for Tongli Ancient Town; recognized as Outstanding Undergraduate Thesis
-                </p>
-                <a href="https://www.youtube.com/watch?v=WV_aUTVudGc" class="project-link" target="_blank">Demo →</a>
             </div>
 
             <div class="project-card">
-                <h3>Deep Reinforcement Learning Research Based on TD3 Algorithm</h3>
+                <h3>LSTM-PER-TD3 Algorithm</h3>
                 <div class="project-meta">
                     <span class="role">Project Leader</span>
-                    <span class="date">Jan 2023 - Jun 2023</span>
+                    <span class="date">Sep 2023 - Jan 2024</span>
                 </div>
                 <p>
-                    Proposed <strong>LPT3</strong>, a reinforcement learning algorithm combining LSTM, PER, and TD3,
-                    achieving <strong>+326%</strong> and <strong>+101%</strong> average returns on HopperBulletEnv-v0 and
-                    HalfCheetahPyBulletEnv-v0, with faster convergence and higher control accuracy.
+                    Proposed <strong>LSTM-PER-TD3</strong>, fusing LSTM actor–critic networks, prioritized replay, and TD3 for more stable continuous control.
                 </p>
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10450268&tag=1" class="project-link" target="_blank">Link to Paper →</a>
+                <ul>
+                    <li>Designed memory-based actor–critics that leverage temporal history to stabilize policy updates</li>
+                    <li>Implemented and evaluated five-step history variants on Hopper, HalfCheetah, and Ant environments</li>
+                    <li>Demonstrated consistent average-return gains over DRL baselines across MuJoCo-style benchmarks</li>
+                </ul>
             </div>
         </section>
 
@@ -608,39 +613,43 @@
                     <p>Experienced</p>
                 </div>
                 <div class="skill-item">
-                    <h3>PyTorch</h3>
+                    <h3>SQL</h3>
                     <p>Experienced</p>
                 </div>
                 <div class="skill-item">
                     <h3>LangChain</h3>
+                    <p>Advanced</p>
+                </div>
+                <div class="skill-item">
+                    <h3>DeepAgent</h3>
+                    <p>Advanced</p>
+                </div>
+                <div class="skill-item">
+                    <h3>PyTorch</h3>
+                    <p>Experienced</p>
+                </div>
+                <div class="skill-item">
+                    <h3>React</h3>
                     <p>Intermediate</p>
                 </div>
                 <div class="skill-item">
-                    <h3>SQL</h3>
+                    <h3>RAG</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-item">
+                    <h3>LoRA Fine-tuning</h3>
                     <p>Intermediate</p>
                 </div>
                 <div class="skill-item">
                     <h3>Git</h3>
+                    <p>Experienced</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Docker</h3>
                     <p>Intermediate</p>
                 </div>
                 <div class="skill-item">
-                    <h3>Machine Learning</h3>
-                    <p>Experienced</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Deep Learning</h3>
-                    <p>Experienced</p>
-                </div>
-                <div class="skill-item">
-                    <h3>LLM Fine-tuning</h3>
-                    <p>Intermediate</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Data Analysis</h3>
-                    <p>Experienced</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Reinforcement Learning</h3>
+                    <h3>Tableau</h3>
                     <p>Intermediate</p>
                 </div>
             </div>
